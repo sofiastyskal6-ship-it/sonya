@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок | Sony.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">SONY.COM</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="reviews.html">Огляди</a></li>
+                <li><a href="contact.html" class="active">Зворотній зв'язок</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div style="height: 80px;"></div>
+
+    <div class="feedback-form">
+        <h2>Напишіть мені</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Повідомлення</label>
+                <textarea id="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn">Відправити</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SONY.COM - Розбір відеоігор</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name && email && message) {
+                alert('Дякую! Ваше повідомлення надіслано ✅');
+                this.reset();
+            } else {
+                alert('Будь ласка, заповніть усі поля!');
+            }
+        });
+    </script>
+</body>
+</html>

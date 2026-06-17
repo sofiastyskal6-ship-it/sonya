@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sony.com - Розбір улюблених ігор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">SONY.COM</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="reviews.html">Огляди</a></li>
+                <li><a href="contact.html">Зворотній зв'язок</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>МОЇ ТОП-6 УЛЮБЛЕНИХ ІГОР</h1>
+            <p>The Last of Us • The Witcher 3 • RDR2 • S.T.A.L.K.E.R. • God of War • FNAF</p>
+            <a href="reviews.html" class="btn">Читати огляди</a>
+        </div>
+    </section>
+
+    <div class="top-games">
+        <h2>Топ-6 ігор</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Місце</th>
+                    <th>Гра</th>
+                    <th>Рік</th>
+                    <th>Жанр</th>
+                    <th>Оцінка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>The Last of Us</td><td>2013</td><td>Action-Adventure</td><td>10/10</td></tr>
+                <tr><td>2</td><td>The Witcher 3: Wild Hunt</td><td>2015</td><td>RPG</td><td>9.8/10</td></tr>
+                <tr><td>3</td><td>Red Dead Redemption 2</td><td>2018</td><td>Action-Adventure</td><td>9.7/10</td></tr>
+                <tr><td>4</td><td>S.T.A.L.K.E.R. (серія)</td><td>2007-2024</td><td>Survival FPS</td><td>9.5/10</td></tr>
+                <tr><td>5</td><td>God of War (2018)</td><td>2018</td><td>Action-Adventure</td><td>9.5/10</td></tr>
+                <tr><td>6</td><td>Five Nights at Freddy's: into the pit</td><td>2024</td><td>Horror</td><td>9/10</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="games-grid">
+        <div class="game-card" onclick="window.location.href='reviews.html#tlou'">
+            <img src="https://upload.wikimedia.org/wikipedia/uk/9/9e/TheLastOfUs.jpg" alt="The Last of Us"
+            width="250"
+            height="250">
+            <h3>The Last of Us</h3>
+            <p>Шедевр від Naughty Dog</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='reviews.html#witcher'">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Witcher_3_cover_art.jpg/250px-Witcher_3_cover_art.jpg" alt="The Witcher 3"
+            width="250"
+            height="250">
+            <h3>The Witcher 3</h3>
+            <p>Найкраща RPG</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='reviews.html#rdr2'">
+            <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt="Red Dead Redemption 2"
+            width="250"
+            height="250">
+            <h3>Red Dead Redemption 2</h3>
+            <p>Ковбойський епік</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='reviews.html#stalker'">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTExMWJmMjItODkwYS00ZDgzLWE5ZDctZmQ5YTI5ZjFkZDM5XkEyXkFqcGc@._V1_.jpg" alt="S.T.A.L.K.E.R."
+            width="250"
+            height="250">
+            <h3>S.T.A.L.K.E.R.</h3>
+            <p>Атмосфера Зони</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='reviews.html#gow'">
+            <img src="https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7" alt="God of War"
+            width="250"
+            height="250">
+            <h3>God of War</h3>
+            <p>Скандинавський епік</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='reviews.html#fnaf'">
+            <img src="https://i1.sndcdn.com/artworks-0Yg92GBS6Osv0TdW-eVGiFA-t500x500.jpg" alt="Five Nights at Freddy's: into the pit"
+            width="250"
+            height="250">
+            <h3>Five Nights at Freddy's: into the pit</h3>
+            <p>Нічний жах</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SONY.COM - Розбір відеоігор</p>
+        <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="reviews.html">Огляди</a>
+            <a href="contact.html">Контакти</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            document.querySelectorAll('.game-card').forEach((card, i) => {
+                if (card.getBoundingClientRect().top < window.innerHeight * 0.8) {
